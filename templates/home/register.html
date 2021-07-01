@@ -1,0 +1,184 @@
+{% extends 'base.html' %} 
+{% load static %}
+{% load humanize %} 
+{% block title %} | Welcome {%endblock %} 
+{% block content %}
+  <!-- Begin page -->
+  <div
+    class="accountbg"
+    style="
+      background: url('assets/images/bg-image.jpg');
+      background-size: cover;
+      background-position: center;
+    "
+  ></div>
+  <div class="wrapper-page account-page-full">
+    <div class="card">
+      <div class="card-block">
+        <div class="account-box">
+          <div class="card-box pr-5 pl-5 pb-5">
+            <h2 class="text-uppercase text-center mt-0 pb-2">
+              <a href="index.php" class="text-success">
+                <span
+                  ><img src="assets/images/logo.png" alt="iTechCV" width="150"
+                /></span>
+              </a>
+            </h2>
+
+            <div class="row" id="rowId">
+              <div class="col-sm-6 pl-0 pr-0">
+                <div class="card card-body">
+                  <h5 class="card-title brdrbtm text-info">
+                    <i class="fa fa-users mr-1"></i> <span>Job Seeker</span>
+                  </h5>
+                  <p>
+                    <i class="dripicons-arrow-right text-info"></i> Create
+                    Account for free
+                  </p>
+                  <p>
+                    <i class="dripicons-arrow-right text-info"></i> Make CV &
+                    Get Job
+                  </p>
+                  <p>
+                    <i class="dripicons-arrow-right text-info"></i> Automatic CV
+                    Format
+                  </p>
+                  <p>
+                    <i class="dripicons-arrow-right text-info"></i> CV Live
+                    Preview
+                  </p>
+                  <p>
+                    <i class="dripicons-arrow-right text-info"></i> Download CV
+                  </p>
+                  <button
+                    id="SkrBtn"
+                    type="button"
+                    class="btn btn-info waves-effect waves-light"
+                  >
+                    <i class="fa fa-users mr-1"></i> <span>Sign Up</span>
+                  </button>
+                </div>
+              </div>
+              <div class="col-sm-6 pr-0 pl-0">
+                <div class="card card-body">
+                  <h5 class="card-title brdrbtm text-primary">
+                    <i class="fa fa-briefcase mr-1"></i><span>Employer</span>
+                  </h5>
+                  <p>
+                    <i class="dripicons-arrow-right text-primary"></i> Create
+                    Account for free
+                  </p>
+                  <p>
+                    <i class="dripicons-arrow-right text-primary"></i> Find
+                    Skill People
+                  </p>
+                  <p>
+                    <i class="dripicons-arrow-right text-primary"></i> Find
+                    Experienced People
+                  </p>
+                  <p>
+                    <i class="dripicons-arrow-right text-primary"></i> Quick
+                    Access
+                  </p>
+                  <p>
+                    <i class="dripicons-arrow-right text-primary"></i> Quick
+                    Response with CV
+                  </p>
+                  <button
+                    id="EmpBtn"
+                    type="button"
+                    class="btn btn-primary waves-effect waves-light"
+                  >
+                    <i class="fa fa-briefcase mr-1"></i> <span>Sign Up</span>
+                  </button>
+                       </div>
+                </div>
+             </div>
+           </div>
+             </div>
+         </div>
+      </div>
+     </div>
+
+
+  <input type="hidden" name="role" value="2">            
+            <div class="form-group row m-b-20">
+                <div class="col-12">
+                    <label for="username">Full Name <span class="starred">*</span></label>
+                    <input name="name" class="form-control " type="text"
+                           id="username"
+                           placeholder="Enter Name">
+                           <span id="eusername_err"></span>
+                </div>
+            </div>
+            <div class="form-group row m-b-20">
+                <div class="col-12">
+                    <label for="emailaddress">Email address <span class="starred">*</span></label>
+                    <input class="form-control " name="email" type="email"
+                           id="emailaddress" placeholder="Enter Email">
+                                        <span id="emailaddress_err"></span>
+                </div>
+            </div>
+            <div class="form-group row m-b-20">
+                <div class="col-6">
+                    <label for="password">Password <span class="starred">*</span></label>
+                    <input name="password" class="form-control " type="password"
+                           id="password"
+                           placeholder="Enter Your Password">
+                                        <span id="password_err"></span>
+                </div>
+                <div class="col-6">
+                    <label for="password_confirmation">Confirm Password <span class="starred">*</span></label>
+                    <input class="form-control "
+                           name="password_confirmation" type="password" id="password_confirmation"
+                           placeholder="Enter Confirm Password">
+                                        <span id="password_confirmation_err"></span>
+                </div>
+            </div>
+            <div class="form-group row m-b-10">
+                <div class="col-6">
+                    <label for="phone">Phone <span class="starred">*</span></label>
+                    <div class="form-group">
+                        <input class="form-control " name="employer_mobile" type="text"
+                               id="phone"
+                               placeholder="Enter Phone">
+
+                                                <span id="phone_err"></span>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <label>Gender</label>
+                    <div class="form-group">
+                        <input type="radio" id="male" name="employer_gender" class=""
+                               value="Male"><label for="male">&nbsp;Male</label>
+                        <input type="radio" id="female" name="employer_gender" class=""
+                               value="Female"><label for="female">&nbsp;Female</label>
+                        <br>
+                                            </div>
+
+                </div>
+            </div>
+            <div class="form-group row m-b-20">
+                <div class="col-6">
+                    <label for="company">Company Name <span class="starred">*</span></label>
+                    <div class="form-group">
+                        <input type="text" id="company" name="company_name" class="form-control " placeholder="ABC Software Ltd">
+                                                <span id="company_err"></span>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <label for="trade">Company Trade License <span class="starred">*</span></label>
+                    <div class="form-group">
+                        <input type="text" id="trade" name="company_trade_license" class="form-control " placeholder="Ex: 0524587">
+                                                <span id="trade_err"></span>
+                    </div>
+                </div>
+            </div>
+    <div class="form-group row text-center m-t-10">
+                <div class="col-12">
+                    <button class="btn btn-block btn-custom waves-effect waves-light" onclick="return eform_validation()" type="submit" name="submitemployer">Employer Sign Up</button>
+                </div>
+            </div>
+        </form>
+{% endblock content %}
+
